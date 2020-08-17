@@ -1,0 +1,17 @@
+{
+    "name": "SCP-JPスタッフ用: 削除通知ツール",
+    "version": "1.0.0",
+    "manifest_version": 2,
+    "description": "低評価記事のリストをクリックすることで、簡単に削除通知を行えるツールです。",
+    "author": "7happy7",
+    "permissions": ["storage", "http://shitake-crude-production.wikidot.com/*", "http://scp-jp.wikidot.com/*"],
+    "web_accessible_resources": ["js/*.js"],
+    "content_scripts": [
+        {
+            "matches": ["http://shitake-crude-production.wikidot.com/*", "http://scp-jp.wikidot.com/*"],
+            "js": ["js/loader.js"],
+            "run_at": "document_end",
+            "all_frames": true
+        }
+    ]
+}
