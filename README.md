@@ -1,6 +1,6 @@
 # インストール
 1. zipファイルをダウンロード（右上の緑色の"↓Code"ボタンをクリック）し、ローカル環境で解凍。
-2. `/js/inject.js`をメモ帳から開き、指定されたコードを貼り付けて上書き保存。
+2. フォルダ内の`/js/inject.js`をメモ帳から開き、指定されたコードを貼り付けて上書き保存。
 3. Chrome拡張に移動。
 > * `chrome://extensions/`
 > * ![safgshdjf (2)](https://user-images.githubusercontent.com/49482246/84563612-c54c4b80-ad97-11ea-9559-584dcc268f4f.png) `(config)` > `その他のツール` > `拡張機能`
