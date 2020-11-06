@@ -8,8 +8,8 @@
 5. `パッケージ化されていない拡張機能を読み込む`をクリックし、以下のファイルを選択。
 ```
 ダウンロード
-└── ch-ex-template-<branch_name>
-    └── ch-ex-template-<branch_name> <-これ！
+└── ch-ex-template-sentei
+    └── ch-ex-template-sentei <-これ！
         ├── js
         │   ├── loader.js
         │   └── inject.js
