@@ -19,9 +19,11 @@
                 "http://shitake-crude-production.wikidot.com/",
                 "http://scp-jp.wikidot.com/",
                 "http://pseudo-scp-jp.wikidot.com/",
+                "http://sentei-scp-jp.wikidot.com/",
                 "http://shitake-crude-production.wikidot.com/main",
                 "http://scp-jp.wikidot.com/main",
-                "http://pseudo-scp-jp.wikidot.com/main"
+                "http://pseudo-scp-jp.wikidot.com/main",
+                "http://sentei-scp-jp.wikidot.com/main"
             ],
             "js": ["js/loader.js"],
             "run_at": "document_end",
