@@ -1,17 +1,35 @@
 {
-    "name": "ツール",
+    "name": "剪定チームスターターセット",
     "version": "1.0.0",
     "manifest_version": 2,
-    "description": "<説明>",
+    "description": "剪定せよ！",
     "author": "7happy7",
-    "permissions": ["storage", "http://shitake-crude-production.wikidot.com/*", "http://scp-jp.wikidot.com/*"],
-    "web_accessible_resources": ["js/*.js"],
+    "permissions": [
+        "storage",
+        "http://shitake-crude-production.wikidot.com/*",
+        "http://scp-jp.wikidot.com/*",
+        "http://pseudo-scp-jp.wikidot.com/*",
+        "https://script.google.com/*",
+        "https://script.googleusercontent.com/*"
+    ],
+    "web_accessible_resources": ["js/*.js", "css/*.css"],
     "content_scripts": [
         {
-            "matches": ["http://shitake-crude-production.wikidot.com/*", "http://scp-jp.wikidot.com/*"],
+            "matches": [
+                "http://shitake-crude-production.wikidot.com/",
+                "http://scp-jp.wikidot.com/",
+                "http://pseudo-scp-jp.wikidot.com/",
+                "http://shitake-crude-production.wikidot.com/main",
+                "http://scp-jp.wikidot.com/main",
+                "http://pseudo-scp-jp.wikidot.com/main"
+            ],
             "js": ["js/loader.js"],
             "run_at": "document_end",
             "all_frames": true
         }
-    ]
+    ],
+    "browser_action": {
+        "default_icon": "sentei.png",
+        "default_title": "剪定"
+    }
 }
