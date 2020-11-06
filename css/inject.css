@@ -1,0 +1,162 @@
+.sentei_wrap {
+    bottom: 0;
+    display: flex;
+    flex-direction: column-reverse;
+    flex-wrap: wrap;
+    position: fixed;
+    right: 2px;
+    z-index: 10;
+}
+.sentei_check {
+    display: none;
+}
+.sentei_label {
+    align-items: center;
+    background: #fff;
+    box-shadow: 0 0 3px;
+    cursor: pointer;
+    display: flex;
+    height: 4em;
+    justify-content: center;
+    position: relative;
+    width: 4em;
+}
+.sentei_label::before {
+    color: #b01;
+    content: '剪';
+    font-size: 2em;
+    font-weight: bold;
+    position: relative;
+}
+.sentei_check:checked + .sentei_label::before {
+    content: '定';
+}
+[disabled] + .sentei_label {
+    cursor: default;
+}
+[disabled] + .sentei_label::before {
+    display: none;
+}
+.line-scale {
+    display: none;
+    height: 2em;
+    justify-content: space-evenly;
+    width: 3em;
+}
+[disabled] + .sentei_label .line-scale {
+    display: flex;
+}
+.line-scale > div {
+    animation: line-scale 1s var(--ld) infinite cubic-bezier(.2,.68,.18,1.08) both;
+    background: #31c2fe;
+    height: 100%;
+    width: 3px;
+}
+.line-scale > div:nth-child(1) {
+    --ld: -.4s;
+}
+.line-scale > div:nth-child(2) {
+    --ld: -.3s;
+}
+.line-scale > div:nth-child(3) {
+    --ld: -.2s;
+}
+.line-scale > div:nth-child(4) {
+    --ld: -.1s;
+}
+.line-scale > div:nth-child(5) {
+    --ld: 0s;
+}
+.sentei_display {
+    background: #fff;
+    box-shadow: 0 0 3px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    left: 0;
+    opacity: 0;
+    pointer-events: none;
+    transition: all .25s;
+    width: 100%;
+    z-index: -1;
+}
+.sentei_check:checked ~ .sentei_display {
+    opacity: 1;
+    pointer-events: auto;
+}
+.sentei_display a {
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+    font-size: 2em;
+    font-weight: bold;
+    height: 2em;
+    justify-content: center;
+    transition: all .25s;
+    width: 100%;
+}
+.sentei_display a:hover {
+    background: #b01;
+    color: #fff;
+    text-decoration: none;
+}
+.sentei_pop {
+    background: #fff;
+    box-shadow: 0 0 3px;
+    position: fixed;
+    top: 3em;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 90%;
+    z-index: 20;
+}
+.sentei_pop h1 {
+    text-align: center;
+}
+.sentei_pop_btn {
+    display: flex;
+    justify-content: center;
+    padding: 1em 0;
+}
+.sentei_pop_btn button {
+    font-size: 1.2em;
+    padding: .5em;
+    min-width: 5em;
+}
+.sentei_prog {
+    background: #333;
+    height: 2em;
+    margin: .5em 1em;
+    position: relative;
+}
+.sentei_prog::before {
+    align-items: center;
+    content: attr(data-now)'%';
+    color: #f38;
+    display: flex;
+    font-family: monospace;
+    font-size: 1.2em;
+    font-weight: bold;
+    height: 100%;
+    justify-content: center;
+    position: absolute;
+    width: 100%;
+}
+.sentei_prog div {
+    background: #3f3;
+    height: 100%;
+    transition: all .5s;
+    width: 0;
+}
+@keyframes line-scale {
+    0%,
+    100% {
+        box-shadow: 0 0 3px rgba(49,194,254,.5);
+        transform: scaley(1);
+    }
+    50% {
+        box-shadow: none;
+        transform: scaley(.4);
+    }
+}
