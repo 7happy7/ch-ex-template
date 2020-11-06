@@ -31,10 +31,10 @@
 .sentei_check:checked + .sentei_label::before {
     content: '定';
 }
-[disabled] + .sentei_label {
+input[disabled] + .sentei_label {
     cursor: default;
 }
-[disabled] + .sentei_label::before {
+input[disabled] + .sentei_label::before {
     display: none;
 }
 .line-scale {
@@ -123,6 +123,10 @@
     font-size: 1.2em;
     padding: .5em;
     min-width: 5em;
+}
+.sentei_pop_btn button[disabled] {
+    color: rgba(0, 0, 0, .5);
+    pointer-events: none;
 }
 .sentei_prog {
     background: #333;
