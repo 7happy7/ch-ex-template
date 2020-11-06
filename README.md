@@ -7,11 +7,14 @@
 4. `デベロッパー モード`を有効化(ページ右上のトグルをクリック)。
 5. `パッケージ化されていない拡張機能を読み込む`をクリックし、以下のファイルを選択。
 ```
-ch-ex-template-<branch_name>
-└── ch-ex-template-<branch_name> <-これ！
-    ├── js
-    │   ├── loader.js
-    │   └── inject.js
-    ├── README.md
-    └── manifest.json
+ダウンロード
+└── ch-ex-template-<branch_name>
+    └── ch-ex-template-<branch_name> <-これ！
+        ├── js
+        │   ├── loader.js
+        │   └── inject.js
+        ├── css
+        │   └── inject.css
+        ├── README.md
+        └── manifest.json
 ```
